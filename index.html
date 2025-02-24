@@ -1,0 +1,237 @@
+<!DOCTYPE html>
+<html lang="fr">
+  <head>
+    <meta charset="UTF-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+    <title>ARNIO</title>
+    <link
+      rel="shortcut icon"
+      href="./assets/img/icons/Left Nest.svg"
+      type="image/x-icon"
+    />
+    <link rel="stylesheet" href="./assets/css/styles.css" />
+
+    <!-- Fonts -->
+    <link rel="preconnect" href="https://fonts.googleapis.com" />
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&display=swap"
+      rel="stylesheet"
+    />
+    <link
+      href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
+      rel="stylesheet"
+    />
+  </head>
+  <body>
+    <nav class="navbar">
+      <div class="container">
+        <div class="nav-logo">
+          <img src="./assets/img/logo/Left Nest.png" alt="ARNIO Logo" />
+        </div>
+        <div class="nav-right">
+          <div class="social-links">
+            <a
+              href="https://www.facebook.com/"
+              class="social-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./assets/img/icons/facebook-box-fill.svg"
+                alt="Facebook"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a
+              href="https://www.instagram.com/"
+              class="social-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./assets/img/icons/instagram-fill.svg"
+                alt="Instagram"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a
+              href="https://www.youtube.com/"
+              class="social-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./assets/img/icons/youtube-fill.svg"
+                alt="Youtube"
+                width="24"
+                height="24"
+              />
+            </a>
+            <a
+              href="https://www.linkedin.com/"
+              class="social-link"
+              target="_blank"
+              rel="noopener"
+            >
+              <img
+                src="./assets/img/icons/linkedin-box-fill.svg"
+                alt="LinkedIn"
+                width="24"
+                height="24"
+              />
+            </a>
+          </div>
+          <button
+            class="cta-button light"
+            onclick="sendMail('COMMANDER MAINTENANT')"
+          >
+            COMMANDER MAINTENANT
+          </button>
+        </div>
+      </div>
+    </nav>
+
+    <section class="hero">
+      <div class="video-background">
+        <video autoplay muted loop playsinline>
+          <source src="./assets/video/hero-background.mp4" type="video/mp4" />
+        </video>
+      </div>
+      <div class="container">
+        <h1>
+          ARNIO REINVENTE LA RECHARGE <br />
+          DES VEHICULES ELECTRIQUES <br />
+          DE BOUT EN BOUT EN AFRIQUE
+        </h1>
+      </div>
+      <button class="scroll-btn" onclick="scrollToSection()">
+        <img src="./assets/img/icons/scroll-button.png" alt="Scroll" />
+      </button>
+    </section>
+
+    <section class="content-section section-1">
+      <div class="container">
+        <h1>ARNIO GEN 2 PRO</h1>
+        <p>22KW</p>
+        <button
+          class="cta-button dark"
+          onclick="sendMail('ARNIO GEN 2 PRO - 22KW')"
+        >
+          Demander un devis
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="arrow-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </button>
+      </div>
+      <button class="scroll-btn" onclick="scrollToSection()">
+        <img src="./assets/img/icons/scroll-button.png" alt="Scroll" />
+      </button>
+    </section>
+
+    <section class="content-section section-2">
+      <div class="container">
+        <h1>
+          INFRASTRUCTURE <br />
+          DE RECHARGE ARNIO
+        </h1>
+        <p>40-60 KW</p>
+        <button
+          class="cta-button dark"
+          onclick="sendMail('INFRASTRUCTURE DE RECHARGE - 40-60KW')"
+        >
+          Demander un devis
+          <svg
+            xmlns="http://www.w3.org/2000/svg"
+            fill="none"
+            viewBox="0 0 24 24"
+            stroke-width="1.5"
+            stroke="currentColor"
+            class="arrow-icon"
+          >
+            <path
+              stroke-linecap="round"
+              stroke-linejoin="round"
+              d="M13.5 4.5L21 12m0 0l-7.5 7.5M21 12H3"
+            />
+          </svg>
+        </button>
+      </div>
+      <button class="scroll-btn scroll-up" onclick="scrollToTop()">
+        <img src="./assets/img/icons/scroll-button.png" alt="Scroll to top" />
+      </button>
+    </section>
+
+    <footer>
+      <div class="container">
+        <div class="footer-content">
+          <div class="footer-logo">
+            <img src="./assets/img/logo/Left Nest.png" alt="ARNIO Logo" />
+          </div>
+          <p>ARNIO 2025 Tous droits réservés.</p>
+        </div>
+      </div>
+    </footer>
+
+    <!-- Script pour la navbar -->
+    <script>
+      window.addEventListener("scroll", function () {
+        const navbar = document.querySelector(".navbar");
+        if (window.scrollY > 50) {
+          navbar.classList.add("scrolled");
+        } else {
+          navbar.classList.remove("scrolled");
+        }
+      });
+
+      function scrollToSection() {
+        const currentPosition = window.scrollY;
+        const section1 = document.querySelector(".section-1").offsetTop;
+        const section2 = document.querySelector(".section-2").offsetTop;
+        const threshold = 100;
+
+        if (currentPosition < section1 - threshold) {
+          document
+            .querySelector(".section-1")
+            .scrollIntoView({ behavior: "smooth" });
+        } else if (currentPosition < section2 - threshold) {
+          document
+            .querySelector(".section-2")
+            .scrollIntoView({ behavior: "smooth" });
+        } else {
+          document
+            .querySelector(".section-2")
+            .scrollIntoView({ behavior: "smooth" });
+        }
+      }
+
+      function scrollToTop() {
+        window.scrollTo({
+          top: 0,
+          behavior: "smooth",
+        });
+      }
+
+      function sendMail(subject) {
+        const email = "arnio@example.com";
+        const mailtoLink = `mailto:${email}?subject=${encodeURIComponent(
+          subject
+        )}`;
+        window.location.href = mailtoLink;
+      }
+    </script>
+  </body>
+</html>
