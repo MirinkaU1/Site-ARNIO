@@ -274,8 +274,10 @@ footer {
 
 .footer-content {
   display: flex;
-  justify-content: space-between;
+  flex-direction: column;
   align-items: center;
+  gap: 1rem;
+  text-align: center;
 }
 
 .footer-logo img {
