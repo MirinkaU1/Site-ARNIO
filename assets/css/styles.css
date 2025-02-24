@@ -136,6 +136,10 @@
   transform: translateX(5px);
 }
 
+.button-text {
+  font-family: "Anton", sans-serif;
+}
+
 /* Section styles */
 .hero,
 .content-section {
@@ -274,10 +278,10 @@ footer {
 
 .footer-content {
   display: flex;
-  flex-direction: column;
+  flex-direction: row; /* Par défaut en ligne pour desktop */
+  justify-content: space-between;
   align-items: center;
-  gap: 1rem;
-  text-align: center;
+  gap: 2rem;
 }
 
 .footer-logo img {
@@ -347,6 +351,20 @@ p {
   display: none;
 }
 
+.mail-icon {
+  width: 24px;
+  height: 24px;
+  display: none;
+}
+
+.mobile-social-links {
+  display: none;
+}
+
+.desktop-social-links {
+  display: flex;
+}
+
 /* Media Queries */
 @media screen and (max-width: 768px) {
   .container {
@@ -374,6 +392,13 @@ p {
     display: none;
   }
 
+  .mobile-social-links {
+    display: flex;
+    justify-content: center;
+    gap: 1.5rem;
+    margin: 1rem 0;
+  }
+
   .cta-button {
     padding: 0.6rem 1rem;
   }
@@ -382,8 +407,16 @@ p {
     display: none;
   }
 
+  .mail-icon {
+    display: block;
+  }
+
   .cart-icon {
     display: block;
+  }
+
+  .desktop-social-links {
+    display: none;
   }
 
   /* Sections */
@@ -400,6 +433,12 @@ p {
   /* Footer */
   footer p {
     font-size: 0.875rem;
+  }
+
+  .footer-content {
+    flex-direction: column;
+    text-align: center;
+    gap: 1rem;
   }
 
   /* Scroll button */
@@ -423,10 +462,5 @@ p {
 
   .cta-button {
     padding: 0.5rem 0.8rem;
-  }
-
-  .cart-icon {
-    width: 20px;
-    height: 20px;
   }
 }
