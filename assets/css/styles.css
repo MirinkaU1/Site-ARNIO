@@ -162,13 +162,13 @@
 .hero-logo {
   width: 300px;
   height: auto;
-  margin-bottom: 6rem;
+  margin-bottom: 9rem;
   animation: fadeInDown 1s ease-out;
 }
 
 .hero-title {
-  font-family: "myriad-pro", sans-serif;
-  font-size: 2rem;
+  font-family: "Open Sans", serif;
+  font-size: 1.5rem;
   font-weight: 400;
 }
 
