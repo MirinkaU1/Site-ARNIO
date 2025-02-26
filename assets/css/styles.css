@@ -561,7 +561,7 @@ p {
   }
 
   .section-2 {
-    background: url("../img/bg-section-2-mobile.jpg") no-repeat center
+    background: url("../img/bg-section-2-mobile.jpg") no-repeat left
       center/cover;
   }
 }
