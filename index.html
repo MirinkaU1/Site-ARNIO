@@ -22,14 +22,15 @@
       href="https://fonts.googleapis.com/css2?family=Anton&family=Inter:ital,opsz,wght@0,14..32,100..900;1,14..32,100..900&display=swap"
       rel="stylesheet"
     />
+    <link rel="stylesheet" href="https://use.typekit.net/ucj8xow.css" />
   </head>
   <body>
     <nav class="navbar">
       <div class="container">
         <div class="nav-logo">
-          <img src="./assets/img/logo/Left Nest.png" alt="ARNIO Logo" />
+          <img src="./assets/img/logo/logo-2.png" alt="ARNIO Logo" />
         </div>
-        <div class="nav-right">
+        <!-- <div class="nav-right">
           <div class="social-links desktop-social-links">
             <a
               href="https://www.facebook.com/"
@@ -104,7 +105,7 @@
               />
             </svg>
           </button>
-        </div>
+        </div> -->
       </div>
     </nav>
 
@@ -115,15 +116,19 @@
         </video>
       </div>
       <div class="container">
-        <h1>
-          ARNIO REINVENTE LA RECHARGE <br />
-          DES VEHICULES ELECTRIQUES <br />
-          DE BOUT EN BOUT EN AFRIQUE
+        <img
+          src="./assets/img/logo/logo-3.png"
+          alt="Arnio Logo"
+          class="hero-logo"
+        />
+        <h1 class="hero-title">
+          Arnio reinvente la recharge des vehicules electriques de bout en bout
+          en afrique
         </h1>
       </div>
-      <button class="scroll-btn" onclick="scrollToSection()">
+      <!--<button class="scroll-btn" onclick="scrollToSection()">
         <img src="./assets/img/icons/scroll-button.png" alt="Scroll" />
-      </button>
+      </button>-->
     </section>
 
     <section class="content-section section-1">
@@ -151,9 +156,9 @@
           </svg>
         </button>
       </div>
-      <button class="scroll-btn" onclick="scrollToSection()">
+      <!-- <button class="scroll-btn" onclick="scrollToSection()">
         <img src="./assets/img/icons/scroll-button.png" alt="Scroll" />
-      </button>
+      </button> -->
     </section>
 
     <section class="content-section section-2">
@@ -184,16 +189,16 @@
           </svg>
         </button>
       </div>
-      <button class="scroll-btn scroll-up" onclick="scrollToTop()">
+      <!-- <button class="scroll-btn scroll-up" onclick="scrollToTop()">
         <img src="./assets/img/icons/scroll-button.png" alt="Scroll to top" />
-      </button>
+      </button> -->
     </section>
 
     <footer>
       <div class="container">
         <div class="footer-content">
           <div class="footer-logo">
-            <img src="./assets/img/logo/Left Nest.png" alt="ARNIO Logo" />
+            <img src="./assets/img/logo/logo-1.png" alt="ARNIO Logo" />
           </div>
           <div class="social-links mobile-social-links">
             <a
@@ -265,33 +270,33 @@
         }
       });
 
-      function scrollToSection() {
-        const currentPosition = window.scrollY;
-        const section1 = document.querySelector(".section-1").offsetTop;
-        const section2 = document.querySelector(".section-2").offsetTop;
-        const threshold = 100;
+      // function scrollToSection() {
+      //   const currentPosition = window.scrollY;
+      //   const section1 = document.querySelector(".section-1").offsetTop;
+      //   const section2 = document.querySelector(".section-2").offsetTop;
+      //   const threshold = 100;
 
-        if (currentPosition < section1 - threshold) {
-          document
-            .querySelector(".section-1")
-            .scrollIntoView({ behavior: "smooth" });
-        } else if (currentPosition < section2 - threshold) {
-          document
-            .querySelector(".section-2")
-            .scrollIntoView({ behavior: "smooth" });
-        } else {
-          document
-            .querySelector(".section-2")
-            .scrollIntoView({ behavior: "smooth" });
-        }
-      }
+      //   if (currentPosition < section1 - threshold) {
+      //     document
+      //       .querySelector(".section-1")
+      //       .scrollIntoView({ behavior: "smooth" });
+      //   } else if (currentPosition < section2 - threshold) {
+      //     document
+      //       .querySelector(".section-2")
+      //       .scrollIntoView({ behavior: "smooth" });
+      //   } else {
+      //     document
+      //       .querySelector(".section-2")
+      //       .scrollIntoView({ behavior: "smooth" });
+      //   }
+      // }
 
-      function scrollToTop() {
-        window.scrollTo({
-          top: 0,
-          behavior: "smooth",
-        });
-      }
+      // function scrollToTop() {
+      //   window.scrollTo({
+      //     top: 0,
+      //     behavior: "smooth",
+      //   });
+      // }
 
       function sendMail(subject) {
         const email = "arnio@example.com";

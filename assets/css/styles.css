@@ -34,8 +34,8 @@
 
 .navbar.scrolled {
   background-color: rgba(9, 8, 18, 0.6);
-  backdrop-filter: blur(10px);
   -webkit-backdrop-filter: blur(10px);
+  backdrop-filter: blur(10px);
 }
 
 .navbar.scrolled .social-link {
@@ -43,7 +43,7 @@
 }
 
 .nav-logo img {
-  height: 50px;
+  height: 40px;
 }
 
 .nav-right {
@@ -159,6 +159,31 @@
   justify-content: flex-start;
 }
 
+.hero-logo {
+  width: 300px;
+  height: auto;
+  margin-bottom: 2rem;
+  animation: fadeInDown 1s ease-out;
+}
+
+.hero-title {
+  font-family: "myriad-pro", sans-serif;
+  font-size: 2.5rem;
+  font-weight: 400;
+}
+
+@media screen and (max-width: 768px) {
+  .hero-title {
+    font-size: 1.8rem;
+  }
+}
+
+@media screen and (max-width: 480px) {
+  .hero-title {
+    font-size: 1.5rem;
+  }
+}
+
 .video-background {
   position: absolute;
   top: 0;
@@ -198,6 +223,8 @@
   z-index: 1;
   padding-top: 120px;
   padding-bottom: 8rem;
+  opacity: 0;
+  animation: fadeIn 1.5s ease-out forwards;
 }
 
 .hero h1,
@@ -333,6 +360,35 @@ p {
 
 .scroll-btn.scroll-up:hover {
   transform: translate(-50%, 5px) rotate(180deg);
+}
+
+@keyframes fadeIn {
+  from {
+    opacity: 0;
+    transform: translateY(20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@keyframes fadeInDown {
+  from {
+    opacity: 0;
+    transform: translateY(-20px);
+  }
+  to {
+    opacity: 1;
+    transform: translateY(0);
+  }
+}
+
+@media screen and (max-width: 768px) {
+  .hero-logo {
+    width: 200px;
+    margin-bottom: 1.5rem;
+  }
 }
 
 @keyframes bounce {
