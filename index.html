@@ -116,7 +116,7 @@
 
     <section class="hero">
       <div class="video-background">
-        <video autoplay muted loop playsinline>
+        <video autoplay muted loop playsinline id="heroVideo">
           <source src="./assets/video/hero-background.mp4" type="video/mp4" />
         </video>
       </div>
@@ -343,24 +343,25 @@
         window.location.href = mailtoLink;
       }
 
-      // // Fonction pour changer la vidéo selon la taille de l'écran
-      // function handleVideoSource() {
-      //   const videoSource = document.querySelector("#videoSource");
-      //   const video = document.querySelector("#heroVideo");
+      // Fonction pour changer la vidéo selon la taille de l'écran
+      function handleVideoSource() {
+        const video = document.querySelector("#heroVideo");
 
-      //   if (window.innerWidth <= 768) {
-      //     videoSource.src = "./assets/video/hero-background-mobile.mp4";
-      //   } else {
-      //     videoSource.src = "./assets/video/hero-background.mp4";
-      //   }
+        if (window.innerWidth <= 768) {
+          video.src = "./assets/video/hero-background-mobile.mp4";
+        } else {
+          video.src = "./assets/video/hero-background.mp4";
+        }
 
-      //   video.load();
-      //   video.play();
-      // }
+        video.load();
+        video.addEventListener("loadeddata", () => {
+          video.play();
+        });
+      }
 
-      // // Exécuter au chargement et au redimensionnement
-      // window.addEventListener("load", handleVideoSource);
-      // window.addEventListener("resize", handleVideoSource);
+      // Exécuter au chargement et au redimensionnement
+      window.addEventListener("load", handleVideoSource);
+      window.addEventListener("resize", handleVideoSource);
     </script>
   </body>
 </html>
